@@ -20,7 +20,7 @@ Your task is to build a REST API using TypeORM and SQLite to manage a property l
 - The satisfaction of all functional requirements
 - Production-like code that is well-coded, clean, and commented
 - Passing and meaningful unit or integration tests
-- Bonus points for using TypeScript in your submission
+- TypeScript is recommended
 
 # Submission
 
