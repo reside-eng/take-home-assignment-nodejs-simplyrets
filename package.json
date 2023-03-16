@@ -12,11 +12,11 @@
     "hono": "latest"
   },
   "devDependencies": {
-    "@tsconfig/node16": "1.0.3",
+    "@tsconfig/node16": "latest",
     "@types/better-sqlite3": "latest",
     "@types/node": "latest",
-    "prettier": "2.8.4",
+    "prettier": "latest",
     "tsx": "latest",
-    "typescript": "5.0.2"
+    "typescript": "latest"
   }
 }
