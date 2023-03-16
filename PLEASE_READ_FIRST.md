@@ -12,9 +12,9 @@ Before starting, please review the instructions carefully.
 
 # Acceptance criteria
 
-Your task is to build a REST API usingSQLite to manage a property list.
+Your task is to build a REST API using SQLite to manage a property list.
 
-The API should enable users perform CRUD actions (create, read, update, delete) on property data from the database.
+The API should enable users to perform CRUD actions (create, read, update, delete) on property data from the database.
 
 Requests should be validated where applicable.
 
