@@ -1,16 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "es5",  
-    "lib": [
-      "es5",
-      "es6"
-    ],                           
-    "experimentalDecorators": true,                  
-    "emitDecoratorMetadata": true,                    
-    "moduleResolution": "node",                                
-    "outDir": "dist",                                 
-    "esModuleInterop": true,                             
-    "strict": true,                                     
-    "skipLibCheck": true 
-  }
+  "extends": "@tsconfig/node16/tsconfig.json"
 }

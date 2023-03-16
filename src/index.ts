@@ -1,24 +1,51 @@
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
+import Database from "better-sqlite3";
 
-import express from "express";
-import AppDataSource from "./dataSource"
-import { router } from "./routes/propertyRoutes"
-import { Property } from './entities/Property'
+// =============== //
+// Initialize app  //
+// =============== //
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+// Docs for Hono: https://hono.dev
+const app = new Hono();
 
-app.use('/properties', router);
+// ==================== //
+// Initialize database  //
+// ==================== //
 
-AppDataSource.initialize().then(async () => {
-  console.log('Database connected')
-  
-  const property = await AppDataSource.manager.find(Property)
-  console.log("Loaded property: ", property)
+// Docs for better-sqlite3: https://github.com/WiseLibs/better-sqlite3
+const db = new Database("property.db");
 
-  app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-  });
-}).catch((err) => {
-  console.error("Error during Data Source initialization", err)
-})
+// ================== //
+// Initialize routes  //
+// ================== //
 
+app.get("/properties", (c) => {
+  return c.text("GET all properties");
+});
+
+app.get("/properties/:id", (c) => {
+  const id = c.req.param("id");
+
+  return c.text(`GET property by id ${id}`);
+});
+
+app.post("/properties", (c) => {
+  return c.text("Create property");
+});
+
+app.put("/properties", (c) => {
+  return c.text("Update property");
+});
+
+app.delete("/properties", (c) => {
+  return c.text("Delete property");
+});
+
+// ========== //
+// Start app  //
+// ========== //
+
+serve(app);
+
+console.log("Server started at http://localhost:3000");
