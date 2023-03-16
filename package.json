@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "start": "tsx src/index.ts",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@hono/node-server": "latest",
@@ -14,6 +15,7 @@
     "@tsconfig/node16": "1.0.3",
     "@types/better-sqlite3": "latest",
     "@types/node": "latest",
+    "prettier": "2.8.4",
     "tsx": "latest",
     "typescript": "5.0.2"
   }
