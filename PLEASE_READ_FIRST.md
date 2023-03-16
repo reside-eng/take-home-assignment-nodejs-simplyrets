@@ -40,6 +40,7 @@ yarn install && yarn start
 In this boilerplate, you will find:
 - The main entry file: `index.js`
 - A seeded SQLite DB with Properties data from SimplyRETS API `property.db`
+- A `dataSource.ts` file for creating typeorm DataSource instance
 - A `entities` folder contains the property TypeORM entity
 - A `services` folder for you to add the service classes that encapsulate the business logic
 - A `routers` folder for you to add the API routes and mapping them to the appropriate controller methods.
@@ -50,5 +51,8 @@ In this boilerplate, you will find:
     - `typeorm`
     - `body-parser`
     - `jest`
+    - `ts-node`
+    - `reflect-metadata`
+    - `@types/node`
 - A `renovate.json` file - you can ignore this, it is just settings for a tool we use to keep dependencies up to date in the assignment
 

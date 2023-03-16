@@ -17,7 +17,7 @@ export class Property {
   @Column()
   bathrooms: number;
 
-  @Column()
+  @Column({ nullable: true })
   type: string;
 
   constructor(address: string, price: number, bedrooms: number, bathrooms: number, type: string) {
