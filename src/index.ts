@@ -9,6 +9,14 @@ import Database from "better-sqlite3";
 // Docs for Hono: https://hono.dev
 const app = new Hono();
 
+app.onError((err, c) => {
+  console.error(`${err}`);
+  c.status(500);
+  return c.json({
+    error: err.message,
+  });
+});
+
 // ==================== //
 // Initialize database  //
 // ==================== //
@@ -21,25 +29,25 @@ const db = new Database("property.db");
 // ================== //
 
 app.get("/properties", (c) => {
-  return c.text("GET all properties");
+  throw new Error("Please implement");
 });
 
 app.get("/properties/:id", (c) => {
   const id = c.req.param("id");
 
-  return c.text(`GET property by id ${id}`);
+  throw new Error("Please implement");
 });
 
 app.post("/properties", (c) => {
-  return c.text("Create property");
+  throw new Error("Please implement");
 });
 
 app.put("/properties", (c) => {
-  return c.text("Update property");
+  throw new Error("Please implement");
 });
 
 app.delete("/properties", (c) => {
-  return c.text("Delete property");
+  throw new Error("Please implement");
 });
 
 // ========== //
