@@ -42,7 +42,7 @@ Once you are satisfied with your assignment, please publish your code (ignore th
 With latest Node LTS installed, run the following commands:
 
 ```sh
-yarn install && yarn start
+yarn install && yarn dev
 ```
 
 ## What will you find inside this boilerplate
