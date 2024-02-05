@@ -2,7 +2,7 @@
   "name": "take-home-assignment-nodejs-simplyrets",
   "version": "1.0.0",
   "description": "Nodejs and SQL take-home assignment for interview candidates",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
     "dev": "tsx watch ./src/index.ts",
